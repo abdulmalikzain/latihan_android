@@ -28,12 +28,34 @@
             android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="+"/>
         <RadioButton
             android:id="@+id/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="-"/>
+        <RadioButton
+            android:id="@+id/pembagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="/"/>
+        <RadioButton
+            android:id="@+id/perkalian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="*"/>
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
@@ -44,9 +66,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:textStyle="bold"
         android:text="Hitung"
+        android:textSize="25dp"
         android:onClick="calculate"/>
     <TextView
         android:id="@+id/result"
