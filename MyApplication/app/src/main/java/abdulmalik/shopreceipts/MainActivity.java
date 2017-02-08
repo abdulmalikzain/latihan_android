@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         num_barang.add(Integer.parseInt(barang[5]));
 
         Intent intent = new Intent(this, ReceiptActivity.class);
-        intent.putExtra("min.barang.num", num_barang);
+        intent.putExtra("main.barang.num", num_barang);
 
         startActivity(intent);
 

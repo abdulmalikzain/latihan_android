@@ -34,7 +34,7 @@
         <EditText android:id="@+id/secure_num" />
     </TableRow>
     <TableRow>
-        <TextView android:text="Secure Camera" />
+        <TextView android:text="Dvd Player" />
         <EditText android:id="@+id/dvd_num"/>
     </TableRow>
     <TableRow>
