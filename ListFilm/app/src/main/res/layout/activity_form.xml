@@ -12,6 +12,7 @@
 
     <TextView
         android:text="Judul Film"
+        android:textSize="10pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
@@ -24,6 +25,7 @@
         android:orientation="horizontal">
         <TextView
             android:text="Publish View"
+            android:textSize="10pt"
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
@@ -47,13 +49,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="Rating"
+            android:textSize="10pt"
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Spinner
             android:id="@+id/pilihrating"
-            android:layout_marginLeft=""
+            android:layout_marginLeft="130dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -61,6 +64,7 @@
 
     <TextView
         android:text="Deskripsi"
+        android:textSize="10pt"
         android:gravity="center_vertical"
         android:layout_alignParentLeft="true"
         android:layout_width="match_parent"
@@ -71,6 +75,7 @@
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/tambah"
+        android:textSize="10pt"
         android:onClick="addFilm"
         android:text="TAMBAH"
         android:layout_width="wrap_content"
