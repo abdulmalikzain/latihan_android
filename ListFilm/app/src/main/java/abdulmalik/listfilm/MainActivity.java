@@ -1,5 +1,6 @@
 package abdulmalik.listfilm;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Movie> movies = new ArrayList<>();
 
+    ArrayAdapter<Movie> adapter;
+    ListView listView;
+
     private void iniMovie(){
         movies.add(new Movie("The Thor", "Film tentang superhero dengan senjata palu", 7.5, 2012));
         movies.add(new Movie("Hulk", "Superhero yang bisa berubah menjadi raksasa hijau" + "sepert monster", 6.5, 2011));
@@ -37,11 +41,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         iniMovie();
-        ArrayAdapter<Movie> adapter = new ArrayAdapter<Movie>(this,
+        adapter = new ArrayAdapter<Movie>(this,
                 android.R.layout.simple_list_item_1, movies);
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-        //        android.R.layout.simple_list_item_1, fileTitles);
-        ListView listView = (ListView) findViewById(R.id.list_film);
+        listView = (ListView) findViewById(R.id.list_film);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -53,5 +55,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void tambahlistadd(View view){
+        Intent intent = new Intent(this, FormActivity.class);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1){
+            if(resultCode==Activity.RESULT_OK){
+
+
+            Movie newMovie = (Movie) data.getSerializableExtra("filmlist.result");
+            movies.add(newMovie);
+            adapter.notifyDataSetChanged();}
+        }
     }
 }
